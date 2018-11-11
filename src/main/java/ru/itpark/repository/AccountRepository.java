@@ -15,20 +15,20 @@ public class AccountRepository {
         return account;
     }
 
-    public Account update(Account account) {
-        throw new UnsupportedOperationException();
+    public Account update(Account account) throws IllegalAccessException {
+        throw new IllegalAccessException();
     }
 
-    public Account findById(int id) {
+    public Account findById(int id) throws IllegalAccessException {
         for (Account account : accounts) {
             if (account.getId() == id) {
                 return account;
             }
         }
-        return null;
+        throw new IllegalAccessException();
     }
 
-    public void removeById(int id) {
-        throw new UnsupportedOperationException();
+    public void removeById(int id) throws IllegalAccessException {
+        throw new IllegalAccessException();
     }
 }
